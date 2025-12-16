@@ -11,6 +11,25 @@ WORKING-STORAGE SECTION.
         05 RES_SOUSTRACTION PIC 99.
         05 RES_MULTIPLICATION PIC 99.
         05 RES_DIVISION PIC 99.
+        05 RES_RESTE PIC 99.
+        05 RES_COMPUTE PIC 99.
 
-PRECEDURE DIVISION.
-      DISPLAY RESULTATS.
+PROCEDURE DIVISION.
+      DISPLAY "Nombre 1 : " NB1.
+      DISPLAY "Nombre 2 : " NB2.
+
+      ADD  NB1 TO NB2 GIVING RES_ADDITION.
+      SUBTRACT NB1 FROM NB2 GIVING RES_SOUSTRACTION.
+      MULTIPLY NB1 BY NB2 GIVING RES_SOUSTRACTION.
+      DIVIDE NB1 BY NB2 GIVING RES_DIVISION REMAINDER RESTE.
+      COMPUTE = ( NB1 + NB2 ) * 2.
+
+      DISPLAY "Le résultat de " NB1 " + " NB2 " = " RES_ADDITION.
+      DISPLAY "Le résultat de " NB1 " - " NB2 " = " RES_SOUSTRACTION.
+      DISPLAY "Le résultat de " NB1 " * " NB2 " = " RES_MULTIPLICATION.
+      DISPLAY "Le résultat de " NB1 " / " NB2 " =" RES_DIVISION.
+      DISPLAY "Le reste de " NB1 " / " NB2 " = " RES_RESTE.
+      DISPLAY "Le résultat de ( " NB1 " + " NB2 " ) * 2 = " RES_COMPUTE.
+      STOP RUN.
+      
+      
