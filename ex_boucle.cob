@@ -4,11 +4,29 @@ PROGRAM-ID. EX_BOUCLE.
 DATA DIVISION.
 WORKING-STORAGE SECTION.
       01 ITERATION PIC 9 VALUE 0.
+      01 AGE PIC 9.
+      01 I PIC 9 VALUE 1.
 
 PROCEDURE DIVISION.
       PERFORM 5 TIMES
         ADD 1 TO ITERATION
         DISPLAY "Itérations : " ITERATION
       END-PERFORM.
+
+      PERFORM UNTIL AGE >= 18 AND AGE <= 60
+        DISPLAY "Entrez un age entre 18 et 60 : "
+        ACCEPT AGE
+      END-PERFORM.
+
+      PERFORM VARYING I FROM 1 BY 1 UNTIL I > 5
+        DISPLAY "Compteur : " I
+      END-PERFORM.
+
+      PROCEDURE DIVISION.
+      MAIN.
+          PERFORM AFFICHER 3 TIMES
+          STOP RUN.
+      AFFICHER.
+          DISPLAY "Message".
 
       STOP RUN.
