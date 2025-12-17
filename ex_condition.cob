@@ -1,18 +1,18 @@
-IDENTIFICATION DIVISON.
+IDENTIFICATION DIVISION.
 PROGRAM-ID. EX_CONDITION.
 
-DATA DIVISON.
+DATA DIVISION.
 WORKING-STORAGE SECTION.
       01 AGE PIC 99.
 
-PRECEDUR DIVISION.
-      DISPLAY "Rentrez votre age : " AGE.
+PROCEDURE DIVISION.
+      DISPLAY "Rentrez votre age : ".
       ACCEPT AGE.
 
       IF AGE >= 18 AND AGE <= 60
         DISPLAY "Age valide."
-      ELSE 
+      ELSE
         DISPLAY "Age non valide."
-      END IF
+      END-IF.
 
       STOP RUN.
