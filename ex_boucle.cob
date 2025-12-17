@@ -24,9 +24,9 @@ PROCEDURE DIVISION.
 
       PROCEDURE DIVISION.
       MAIN.
-          PERFORM AFFICHER 3 TIMES
-          STOP RUN.
+        PERFORM AFFICHER 3 TIMES
+        STOP RUN.
       AFFICHER.
-          DISPLAY "Message".
+        DISPLAY "Message".
 
       STOP RUN.
